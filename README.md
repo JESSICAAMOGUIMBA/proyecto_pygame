@@ -6,3 +6,4 @@ Lunes-viernes(15 al 19) Julio 2019 .....iremos avanzando en el proyecto ya sea e
 tambien en el transcurso de la semana acudiremos a la Ofc. para alguna duda del proyecto.
 -----------------------------
 fin del proyecto maximo 2 de agosto
+proyecto  postergado momentaneamente
