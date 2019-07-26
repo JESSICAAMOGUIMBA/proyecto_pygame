@@ -1,5 +1,4 @@
 
-
 import pygame
 from pygame.locals import*
 from sys import exit
@@ -11,6 +10,8 @@ pygame.init()
 negro = (0, 0, 0)
 blanco = (255, 255, 255)
 screen = pygame.display.set_mode((890, 550), 0, 32)
+
+
 
 # titulo a la ventana
 pygame.display.set_caption("Duck Hunt")
@@ -60,7 +61,7 @@ while True:
         x_duck = 0
         y_duck = randint(0, 450)
 
-        # errou, toca a musica do game over
+        # error, toca la musica de game over
         pygame.mixer.music.load("duckHurtGameOver.ogg")
         pygame.mixer.music.play()
 
@@ -96,7 +97,10 @@ while True:
         x_duck = -50
         y_duck = -50
         #imagen en la mitad del fondo
-        screen.blit(pygame.image.load("perro.gif"), (400, 340))
+        screen.blit(pygame.image.load("Sprite_del_Perro_de_Duck_Hunt.gif"), (670, 180))
+        screen.blit(pygame.image.load("gameOver.jpg"), (75, 150))
+        #screen.blit(pygame.image.load("salir.gif"), (650, 75))
+
 
     screen.blit(pygame.image.load("mira.gif").convert(), posicion)
 
