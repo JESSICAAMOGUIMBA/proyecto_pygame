@@ -1,5 +1,7 @@
 import pygame
 from pygame.locals import *
+import os
+from sys import exit
 
 
 class Menu:
@@ -61,6 +63,8 @@ class Menu:
 def jugador_1 ():
     
     print (" Nuevo jugador 1")
+
+    
 
 def jugador_2 ():
     print (" Nuevo jugador 2")

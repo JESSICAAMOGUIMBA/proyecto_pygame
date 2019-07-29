@@ -46,6 +46,7 @@ pygame.mixer.music.load("fondoMusica.mp3")
 #numero de veces q se repetira la musica
 pygame.mixer.music.play(2)
 
+
 while True:
     
     for event in pygame.event.get():
