@@ -1,4 +1,3 @@
-
 import pygame
 from pygame.locals import*
 from sys import exit
@@ -26,7 +25,7 @@ y_clic = 0
 
 # variable para la posicion del pato (randomico)
 x_duck = 0
-y_duck = randint(0, 450)
+y_duck = randint(0, 450)#tamaño restringido para los aleatorios en Y
 
 # inicializamos contadores para puntos y la velocidad
 puntos = 0
@@ -42,16 +41,22 @@ pygame.mixer.init(44100, -16, 2, 1024)
 # configuracion del volume de la musica entre 0.0/1.0
 #https://www.pygame.org/docs/ref/music.html#pygame.mixer.music.set_volume
 pygame.mixer.music.set_volume(0.5)
+#musica de fondo al inicial el juego
+pygame.mixer.music.load("fondoMusica.mp3")
+#numero de veces q se repetira la musica
+pygame.mixer.music.play(2)
 
 while True:
+    
     for event in pygame.event.get():
         # 
         if event.type == QUIT:
             exit()
         elif event.type == MOUSEMOTION:
-            x_pos, y_pos = pygame.mouse.get_pos()
+            x_pos, y_pos = pygame.mouse.get_pos() #Devuelve la posición X y Y del cursor del mouse. 
         elif event.type == MOUSEBUTTONDOWN:
             x_clic, y_clic = pygame.mouse.get_pos()
+
 
     posicion = (x_pos - 50, y_pos - 50)
 
@@ -81,7 +86,8 @@ while True:
 
     if x_clic in range(x_duck * velocidad - 30, x_duck * velocidad + 30) and y_clic in range(y_duck - 30, y_duck + 30):
         # agregsmos musica cuando mata al pato
-        pygame.mixer.music.load("punto.ogg")
+        pygame.mixer.music.load("Perfect.mp3")
+        #pygame.mixer.music.load("punto.ogg")
         pygame.mixer.music.play()
 
         #va sumando los puntos
@@ -100,6 +106,9 @@ while True:
         screen.blit(pygame.image.load("Sprite_del_Perro_de_Duck_Hunt.gif"), (670, 180))
         screen.blit(pygame.image.load("gameOver.jpg"), (75, 150))
         #screen.blit(pygame.image.load("salir.gif"), (650, 75))
+        
+
+
 
 
     screen.blit(pygame.image.load("mira.gif").convert(), posicion)
