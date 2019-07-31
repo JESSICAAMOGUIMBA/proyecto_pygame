@@ -59,9 +59,9 @@ while True:
             x_clic, y_clic = pygame.mouse.get_pos()
 
 
-    posicion = (x_pos - 50, y_pos - 50)
+    posicion = (x_pos - 50, y_pos - 50)#posicion del pato
 
-    x_duck += 1
+    x_duck += 1#movimiento en x del pato
 
     if x_duck * velocidad > 890 and not pierde:
         x_duck = 0
@@ -101,8 +101,8 @@ while True:
     screen.blit(pygame.image.load("pato.gif"), (x_duck * velocidad, y_duck))
 
     if pierde:
-        x_duck = -50
-        y_duck = -50
+        x_duck = -50 #Cuando la posicion de x en el pato sale de la pantalla
+        y_duck = -50 #Cuando la posicion de y en el pato sale de la pantalla
         #imagen en la mitad del fondo
         screen.blit(pygame.image.load("Sprite_del_Perro_de_Duck_Hunt.gif"), (670, 180))
         screen.blit(pygame.image.load("gameOver.jpg"), (75, 150))

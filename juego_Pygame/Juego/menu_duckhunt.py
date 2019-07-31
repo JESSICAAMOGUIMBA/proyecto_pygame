@@ -1,6 +1,7 @@
 from tkinter import *
 import os
 from sys import exit
+
 ventana=Tk()
 
 ventana.title("PLAY DUNCKHUNT!!!")
